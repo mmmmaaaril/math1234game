@@ -1,39 +1,30 @@
-/* Center the button */
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Style button on hover */
-button:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Container for game results */
-#game-results {
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style game result elements */
-#game-results div {
-    margin-bottom: 10px;
-}
-
-/* Bold formatting for game result titles */
-#game-results b {
-    font-weight: bold;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probability Game</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="dice-selection">
+    <label for="player1-die">Player 1 Die:</label>
+    <select id="player1-die">
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+    </select>
+    <label for="player2-die">Player 2 Die:</label>
+    <select id="player2-die">
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+    </select>
+    <button id="playButton">Play Games</button>
+</div>
+<div id="game-results"></div>
+<script src="script.js"></script>
+</body>
+</html>
