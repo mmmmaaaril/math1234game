@@ -13,6 +13,8 @@ function rollDie(die) {
 
 // Function to play a single game
 function playGame(player1Die, player2Die) {
+    console.log("Playing game with:", player1Die, "and", player2Die);
+
     let player1Score = 0;
     let player2Score = 0;
 
@@ -21,6 +23,8 @@ function playGame(player1Die, player2Die) {
         const player1Roll = rollDie(dice[player1Die]);
         const player2Roll = rollDie(dice[player2Die]);
 
+        console.log("Round", i + 1, "- Player 1 rolled:", player1Roll, "Player 2 rolled:", player2Roll);
+
         // Determine the winner of the round
         if (player1Roll > player2Roll) {
             player1Score++;
@@ -28,6 +32,8 @@ function playGame(player1Die, player2Die) {
             player2Score++;
         }
     }
+
+    console.log("Game Over! Player 1 Score:", player1Score, "Player 2 Score:", player2Score);
 
     // Determine the winner of the game
     let winner;
@@ -39,17 +45,23 @@ function playGame(player1Die, player2Die) {
         winner = "Tie";
     }
 
+    console.log("Winner:", winner);
+
     return { player1Score, player2Score, winner };
 }
 
 // Function to play multiple games
 function playGames() {
+    console.log("Starting game...");
+
     const games = playMultipleGames();
     displayGameResults(games);
 }
 
 // Function to display game results
 function displayGameResults(games) {
+    console.log("Displaying game results...");
+
     const resultContainer = document.getElementById("game-results");
     resultContainer.innerHTML = "";
 
