@@ -2,7 +2,7 @@
 const dice = {
     green: [4, 4, 4, 4, 0, 0], // Green die
     blue: [3, 3, 3, 3, 3, 3], // Blue die
-    red: [2, 2, 2, 2, 6, 6], // Red die
+    red: [2, 2, 2, 2, 6, 6], // Red die (corrected)
     yellow: [5, 5, 5, 1, 1, 1] // Yellow die
 };
 
